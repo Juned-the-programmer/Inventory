@@ -1,19 +1,28 @@
 {% load static %}
+
 <!doctype html>
+
 <html lang="en">
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="shortcut icon" href="{% static 'iamges/favicon.ico' %}" />
+        <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
       
         <link rel="stylesheet" href="{% static 'css/backend-plugin.min.css' %}">
-        <link rel="stylesheet" href="{% static 'css/backend.css?v=1.0.0' %}">  </head>
+        <link rel="stylesheet" href="{% static 'css/backend.css' %}">
+        <title>{% block title %}
+        {% endblock title %}</title>
     </head>
 
     <body class=" ">
         <div id="loading">
             <div id="loading-center">
             </div>
+        </div>
+        {% include "pages/navbar.html" %}
+        <div class="container-fluid">
+        {% block content %}
+        {% endblock content %}
         </div>
     </body>
     <script src="{% static 'js/backend-bundle.min.js' %}"></script>
