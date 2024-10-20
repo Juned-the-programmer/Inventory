@@ -1,8 +1,7 @@
 {% extends "pages/base.html" %}
-{% load static %}
 
 {% block title %}
-Update Customer
+Add Supplier
 {% endblock title %}
 
 {% block content %}
@@ -11,7 +10,7 @@ Update Customer
         <div class="card">
             <div class="card-header d-flex justify-content-between">
                 <div class="header-title">
-                    <h4 class="card-title">Update Customer</h4>
+                    <h4 class="card-title">Add Supplier</h4>
                 </div>
                 <div class="header-action"></div>
             </div>
@@ -21,27 +20,27 @@ Update Customer
                     <div class="form-row">
                         <div class="col-md-6 mb-3">
                             <label for="validationCustom01">First name</label>
-                            <input type="text" class="form-control" id="validationCustom01" name="fullname" value="Juned" required />
+                            <input type="text" class="form-control" id="validationCustom01" name="fullname" required />
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="validationCustom02">Last name</label>
-                            <input type="text" class="form-control" id="validationCustom02" name="lastname" value="Davada" required />
+                            <input type="text" class="form-control" id="validationCustom02" name="lastname" required />
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="validatePhone">Phone</label>
-                            <input type="text" class="form-control" id pattern="[6-9]{1}[0-9]{9}" name="phonenumber" value="7698530801" required/>       
+                            <input type="text" class="form-control" id pattern="[6-9]{1}[0-9]{9}" name="phonenumber" required/>       
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="validateEmail">Email</label>
-                            <input type="email" class="form-control" id="validateEmail" name="email" value="abc@gmail.com" required />
+                            <input type="email" class="form-control" id="validateEmail" name="email" required />
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="validationCustom03">City</label>
-                            <input type="text" class="form-control" id="validationCustom03" name="city" value="Palanpur" required />
+                            <input type="text" class="form-control" id="validationCustom03" name="city" required />
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="validationCustom04">State</label>
-                            <select class="form-control" id="validationCustom04" name="state" value="Gujarat" required>
+                            <select class="form-control" id="validationCustom04" name="state" required>
                                 <option selected disabled value="">Choose...</option>
                                 <option>...</option>
                             </select>
@@ -49,14 +48,14 @@ Update Customer
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="validateLandmark">Land Mark</label>
-                            <input type="text" class="form-control" id="validateLandmark" name="landmark" value="City Light Road" required />
+                            <input type="text" class="form-control" id="validateLandmark" name="landmark" required />
                         </div>
                         <div class="col-md-6 mb-3">
                             <label for="validationCustom05">Zip</label>
-                            <input type="text" class="form-control" pattern="[0-9]{5}" id="validationCustom05" name="zipcode" value="385520" required />
+                            <input type="text" class="form-control" pattern="[0-9]{5}" id="validationCustom05" name="zipcode" required />
                         </div>
                     </div>
-                    <button class="btn btn-primary" type="submit">Update Customer</button>
+                    <button class="btn btn-primary" type="submit">Add Supplier</button>
                 </form>
             </div>
         </div>
