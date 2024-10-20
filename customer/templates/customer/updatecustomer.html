@@ -1,0 +1,65 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+{% block title %}
+Update Customer
+{% endblock title %}
+
+{% block content %}
+<div class="row">
+    <div class="col-sm-12 col-lg-12">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between">
+                <div class="header-title">
+                    <h4 class="card-title">Add Customer</h4>
+                </div>
+                <div class="header-action"></div>
+            </div>
+            <div class="card-body">
+                <form method="post">
+                    {% csrf_token %}
+                    <div class="form-row">
+                        <div class="col-md-6 mb-3">
+                            <label for="validationCustom01">First name</label>
+                            <input type="text" class="form-control" id="validationCustom01" name="fullname" value="Juned" required />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationCustom02">Last name</label>
+                            <input type="text" class="form-control" id="validationCustom02" name="lastname" value="Davada" required />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validatePhone">Phone</label>
+                            <input type="text" class="form-control" id pattern="[6-9]{1}[0-9]{9}" name="phonenumber" value="7698530801" required/>       
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validateEmail">Email</label>
+                            <input type="email" class="form-control" id="validateEmail" name="email" value="abc@gmail.com" required />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationCustom03">City</label>
+                            <input type="text" class="form-control" id="validationCustom03" name="city" value="Palanpur" required />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationCustom04">State</label>
+                            <select class="form-control" id="validationCustom04" name="state" value="Gujarat" required>
+                                <option selected disabled value="">Choose...</option>
+                                <option>...</option>
+                            </select>
+                            <div class="invalid-feedback">Please select a valid state.</div>
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validateLandmark">Land Mark</label>
+                            <input type="text" class="form-control" id="validateLandmark" name="landmark" value="City Light Road" required />
+                        </div>
+                        <div class="col-md-6 mb-3">
+                            <label for="validationCustom05">Zip</label>
+                            <input type="text" class="form-control" pattern="[0-9]{5}" id="validationCustom05" name="zipcode" value="385520" required />
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Update Customer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}
